@@ -1,0 +1,100 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% Set applicant's personal data for header
+\name{Matthew Anderson}
+\address{1209 Washington Ave. \linebreak Apt 609 \linebreak St. Louis, MO 63103}
+\contacts{(314)-210-8316 \linebreak matthewia94@gmail.com}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+	% Print the content
+	\begin{cvsection}{Employment}
+        \begin{cvsubsection}{Software Engineer}{The Boeing Company}{2016 - Present}			
+			\begin{itemize}
+				\item Worked in a classified environment
+				\item Contributed as a member of a small team to implement algorithms focusing on sensor fusion.
+				\item Implemented application for system level tests of algorithm library which supported multiple data sources and integrated with internal systems. 
+                \item Designed a modular library with the ability to run multiple algorithms and combine results to allow for easy addition of algorithms.
+                \item Created platform independent algorithms which were configurable to be able to run in varied environments.
+			\end{itemize}
+		\end{cvsubsection}
+		
+        \begin{cvsubsection}[2]{Introduction to AI Teaching Assitant and Grader}{Missouri University of Science and Technology}{2016}	
+			\begin{itemize}
+                \item Assisted students with troubleshooting and debugging of programming assignments.
+                \item Provided detailed feedback on programs focusing on adversarial search algorithms.
+                \item Designed and tested programming problems to provide interesting and challengin problems which could be solved using increasingly sophisticated search algorithms.
+			\end{itemize}
+		\end{cvsubsection}
+		
+        \begin{cvsubsection}[2]{Student Technical Assistant}{Missouri University of Science and Technology}{2013 - 2014}		
+			\begin{itemize}
+                \item Maintained a program designed to remove foliage from LIDAR point clouds in which an object was obscured.
+                \item Improved runtime performance by 500\% by utilizing CUDA and parallel processing.
+                \item Extracted functionality of the foliage removal program into a ROS deliverable which could be easily integrated into robotics platforms.
+			\end{itemize}
+		\end{cvsubsection}
+		
+        \begin{cvsubsection}{Software Engineering Intern}{Garmin International}{2014}	
+			\begin{itemize}
+			    \item Designed and implemented an automated hardware regression testing system.
+                \item Callaborated with other teams to integrate with the company standard error logging system.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Rolla, MO}{Missouri Univeristy of Science and Technology}{2012 - 2016}
+			\begin{itemize}
+				\item B.S. in Computer Science, GPA: 3.69
+                \item B.S. in Computer Engineering, GPA: 3.69
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}	
+	
+	\begin{cvsection}{Additional Experience and Awards}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}	
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Languages and Technologies}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+                \item C++; Java; Python; Robot Operating System (ROS); CUDA; CMake; Boost; 
+				\item Linux;
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+\end{document}
