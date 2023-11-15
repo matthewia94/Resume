@@ -20,6 +20,8 @@
 %% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 %% SOFTWARE.
 
+% !TeX program = xelatex
+
 % The font could be set to Windows-specific Calibri by using the 'calibri' option
 \documentclass[]{mcdowellcv}
 
@@ -28,16 +30,18 @@
 
 % For better comments
 \usepackage{comment}
+\includecomment{cruise}
 \includecomment{boeing}
-\includecomment{aigrader}
-\includecomment{johndeere}
-\includecomment{rockmech}
-\includecomment{garmin}
-\includecomment{vijon}
+\excludecomment{aigrader}
+\excludecomment{johndeere}
+\excludecomment{rockmech}
+\excludecomment{garmin}
+\excludecomment{vijon}
+\excludecomment{technical-experience}
 
 % Set applicant's personal data for header
 \name{Matthew Anderson}
-\address{1209 Washington Ave, Apt 609 \linebreak St. Louis, MO 63103}
+\address{13012 65th Ave SE \linebreak Snohomish, WA 98296}
 \contacts{(314)-210-8316 \linebreak matthewia94@gmail.com}
 
 \begin{document}
@@ -48,15 +52,31 @@
 % Employment
 \begin{cvsection}{Employment}
 
+% Cruise
+\begin{cruise}
+    \begin{cvsubsection}{Senior Machine Learning Engineer II - Perception}{Cruise}{Jun 2018 - Present}
+        \begin{itemize}
+            \item Develop and implement strategies for adapting machine learning models to multiple vehicle and sensor platforms utilizing: multi stage training, data augmentation and simulation data 
+            \item Implement, test, analyze, deploy, and monitor safety critical features improving overall tracking performance with a focus on data association and multi sensor fusion
+            \item Act as a technical leader on the team through mentorship, roadmapping, and project management
+            \item Mantain onboard vehicle stack to extract model input features and process model outpulst for downstream consumption 
+            \item Collaborate with detection teams and consumers to solve problems throughout perception such as perceiving non critical objects
+            \item Utilized machine learning techniques including: feature engineering, data mining, loss weighting, and model architecture changes to improve model behavior and enable higher speed tracking 
+            \item Automated data pipelines with internal libraries to ultimately fully automate model data generation, retrain, and deployment with a single command; Increased developer iteration speed by 3x and enabled the team to ship model iterations on a monthly cadence.
+            \item Contributed to replacing legacy systems with machine learning solutions for tracking problems
+        \end{itemize}
+    \end{cvsubsection}
+\end{cruise}
+
 % Boeing
 \begin{boeing}
-    \begin{cvsubsection}{Software Engineer}{The Boeing Company}{Jul 2016 - Present}         
+    \begin{cvsubsection}{Software Engineer - Sensors and Special Programs}{The Boeing Company}{Jul 2016 - May 2018}
         \begin{itemize}
-            \item Implement sensor data fusion algorithms with a small team
-            \item Create standalone libraries which can be integrated into multiple Boeing platforms
+            \item Implemented sensor data fusion algorithms with a small team of 5 contributors 
+            \item Created standalone libraries to be integrated into multiple Boeing platforms
             \item Designed and developed a modular library capable of running multiple related algorithms and combining their results
-            \item Implemented and continue to maintain an application to perform offline simulations which integrate with internally developed systems to evaluate algorithm performance
-            \item Prototyped, tested and analyzed a new Kalman filtering functionality to increase performance of algorithms
+            \item Implemented and maintained an application to perform offline simulations which integrated with internally developed tools to evaluate algorithm performance
+            \item Prototyped, tested and analyzed a new Kalman filtering functionality to increase performance of algorithms and enable new capabilities
         \end{itemize}
     \end{cvsubsection}
 \end{boeing}
@@ -126,19 +146,21 @@
 \end{cvsection} 
 
 % Experience and Awards
-\begin{cvsection}{Technical Experience}
-    \begin{cvsubsection}{}{}{}  
-        \begin{itemize} 
-            \item \textbf{Competition Robotics Team (2012 - 2016)}: Led the programming division and contributed to the development of a fully autonomous robot designed to compete in the Intelligent Ground Vehicle Competition (IGVC). Focused on path finding and computer vision algorithms for navigating an outdoor obstacle course utilizing LIDAR and stereo optics.
-        \end{itemize}
-    \end{cvsubsection}
-\end{cvsection}
+\begin{technical-experience}
+    \begin{cvsection}{Technical Experience}
+        \begin{cvsubsection}{}{}{}  
+            \begin{itemize} 
+                \item \textbf{Competition Robotics Team (2012 - 2016)}: Led the programming division and contributed to the development of a fully autonomous robot designed to compete in the Intelligent Ground Vehicle Competition (IGVC). Focused on path finding and computer vision algorithms for navigating an outdoor obstacle course utilizing LIDAR and stereo optics.
+            \end{itemize}
+        \end{cvsubsection}
+    \end{cvsection}
+\end{technical-experience}
 
 % Languages and Tech
 \begin{cvsection}{Languages and Technologies}
     \begin{cvsubsection}{}{}{}  
         \begin{itemize}
-            \item C++; Java; Python; Robot Operating System (ROS); CUDA; CMake; Git; Boost; OpenCV
+            \item C++; Python; PyTorch; Robot Operating System (ROS); Bazel; CMake; Git; Boost;
         \end{itemize}
     \end{cvsubsection}
 \end{cvsection}
