@@ -73,6 +73,9 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % For spcaed small caps
 \usepackage{microtype}
 
+% linespacing 
+\usepackage{setspace}
+
 \DeclareMicrotypeSet*{smallcapsi} { 
 	encoding = {OT1,T1,T2A,LY1,OT4,QX,T5,TS1,EU1,EU2},
 	shape = {sc*,si,scit}
@@ -217,4 +220,5 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\end{adjustwidth}
 	\vspace*{\aftersubsectionspace}
 }
+\linespread{1.25}
 \makeatother
