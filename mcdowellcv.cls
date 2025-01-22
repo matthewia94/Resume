@@ -37,11 +37,6 @@
 % Set document margins
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} 
 
-% Set font face
-\usepackage{fontspec}
-\setmainfont[SmallCapsFeatures={Renderer=Basic},
-Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
-
 % Remove paragraph indentation
 \usepackage[parfill]{parskip} 
 
@@ -85,35 +80,19 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 %                                    Constants                                  -
 %--------------------------------------------------------------------------------
 
-\ifthenelse{\equal{\platformname}{\notwindowsname}}{
-	\def\namespaceskip{0.575em}
-	\def\afterheaderspace{1.1pt}
-	\def\beforesectionheaderspace{5pt}
-	\def\sectionheadermargin{6pt}
-	\def\beforesectionheaderhrulespace{2.85pt}
-	\def\sectionheaderhrlueheight{0.518pt}
-	\def\aftersectionheaderspace{-5.8pt}
-	\def\aftersinglelinesubsectionheaderspace{-20.25pt}
-	\def\afterdoublelinesubsectionheaderspace{-11.75pt}
-	\def\aftermultilinesubsectionheaderspace{-7.75pt}
-	\def\afteremptysubsectionheaderspace{1.25pt}
-	\def\subsectionmargin{9pt}
-	\def\aftersubsectionspace{2.1pt}
-}{
-	\def\namespaceskip{0.4em}
-	\def\afterheaderspace{3pt}
-	\def\beforesectionheaderspace{4.75pt}
-	\def\sectionheadermargin{6pt}
-	\def\beforesectionheaderhrulespace{3pt}
-	\def\sectionheaderhrlueheight{0.5pt}
-	\def\aftersectionheaderspace{-4pt}
-	\def\aftersinglelinesubsectionheaderspace{-12.5pt}
-	\def\afterdoublelinesubsectionheaderspace{-4pt}
-	\def\aftermultilinesubsectionheaderspace{0pt}
-	\def\afteremptysubsectionheaderspace{3pt}
-	\def\subsectionmargin{9pt}
-	\def\aftersubsectionspace{4pt}
-}
+\def\namespaceskip{0.4em}
+\def\afterheaderspace{3pt}
+\def\beforesectionheaderspace{4.75pt}
+\def\sectionheadermargin{6pt}
+\def\beforesectionheaderhrulespace{3pt}
+\def\sectionheaderhrlueheight{0.5pt}
+\def\aftersectionheaderspace{-4pt}
+\def\aftersinglelinesubsectionheaderspace{-12.5pt}
+\def\afterdoublelinesubsectionheaderspace{-4pt}
+\def\aftermultilinesubsectionheaderspace{0pt}
+\def\afteremptysubsectionheaderspace{3pt}
+\def\subsectionmargin{9pt}
+\def\aftersubsectionspace{4pt}
 
 %--------------------------------------------------------------------------------
 %                            Header Setup and Printing                          -
@@ -141,7 +120,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 	\typeout {kokoko}
 	\typeout \spaceskip
 	\spaceskip \namespaceskip \relax
-	\textbf{\LARGE\textls[110]{\textsc{\@name}}}
+	\textbf{\LARGE{\textsc{\@name}}}
 }
 
 \makeatother
