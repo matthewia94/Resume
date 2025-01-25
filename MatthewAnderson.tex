@@ -24,9 +24,14 @@
 
 % The font could be set to Windows-specific Calibri by using the 'calibri' option
 \documentclass[]{mcdowellcv}
+\renewcommand{\familydefault}{\sfdefault}
 
 % For mathematical symbols
 \usepackage{amsmath}
+\usepackage[
+    colorlinks=true
+]{hyperref}
+\usepackage{xcolor}
 
 % For better comments
 \usepackage{comment}
@@ -39,12 +44,17 @@
 \excludecomment{vijon}
 \excludecomment{technical-experience}
 
+\AtBeginDocument{
+  \hypersetup{
+    linkcolor=blue,   
+    urlcolor=blue}
+}
+\begin{document}
+
 % Set applicant's personal data for header
 \name{Matthew Anderson}
-\address{13012 65th Ave SE \linebreak Snohomish, WA 98296}
+\address{Seattle, WA \linebreak \href{https://www.linkedin.com/in/matthewianderson/}{linkedin.com/in/matthewianderson}}
 \contacts{(314)-210-8316 \linebreak matthewia94@gmail.com}
-
-\begin{document}
 
 % Header
 \makeheader
@@ -56,14 +66,23 @@
 \begin{cruise}
     \begin{cvsubsection}{Senior Machine Learning Engineer II - Perception}{Cruise LLC}{Jun 2018 - Present}
         \begin{itemize}
-            \item Develop and implement strategies for adapting machine learning models to multiple vehicle and sensor platforms utilizing: multi stage training, data augmentation and simulation data 
-            \item Implement, test, analyze, deploy, and monitor safety critical features improving overall tracking performance with a focus on data association and multi sensor fusion
-            \item Act as a technical leader on the team through mentorship, roadmapping, and project management
-            \item Mantain onboard vehicle stack to extract model input features and process model outputs for downstream consumption 
-            \item Collaborate with partner teams to solve problems throughout perception such as perceiving non critical objects
-            \item Utilized machine learning techniques including: feature engineering, data mining, loss weighting, and model architecture changes to improve model behavior and enable higher speed tracking 
-            \item Automated data pipelines with internal libraries to ultimately fully automate model data generation, retrain, and deployment with a single command; Increased developer iteration speed by 3x and enabled the team to ship model iterations on a monthly cadence.
-            \item Contributed to replacing legacy systems with machine learning solutions for tracking problems
+            \item Implemented, tested, analyzed, deployed, and monitored safety critical features for improving overall perception performance:
+            \begin{itemize}
+                \item Added support for object velocity prediction in an early fusion detection model reducing false positive motion predictions by over 100\%
+                \item Iterated on data and loss weighting to recall out of distribution objects traveling at extreme speeds
+                \item Experimented with new architectures for perception such as TrackFormer and DSVT
+                \item Identified and planned solutions for observed road problems including: harsh braking around cones, poor classification of large animals, sensor specific ghosting artifacts
+            \end{itemize}
+            \item Acted as a technical leader on the team through mentorship and project management:
+            \begin{itemize}
+                \item Led, reviewed, and approved model release analyses across perception to ensure safe deployments
+                \item Ran experiment reviews and led discussions to share learnings and align on follow-up experiments
+                \item Worked with partner teams to improve developer velocity and safety through automations in analysis
+                \item Documented and formalized processes to ensure a consistently high safety bar within perception
+            \end{itemize}
+            \item Responsible for maintaining the onboard vehicle stack to extract model input features and process model outputs for downstream consumption
+            \item Automated data pipelines with internal libraries to fully automate model data generation, retrain, and deployment with a single command; Increased developer iteration speed by 3x and enabled the team to merge model iterations on a monthly cadence when necessary
+            \item Collaborated to replace legacy tracking systems with machine learning solutions 
         \end{itemize}
     \end{cvsubsection}
 \end{cruise}
@@ -72,11 +91,9 @@
 \begin{boeing}
     \begin{cvsubsection}{Software Engineer - Sensors and Special Programs}{The Boeing Company}{Jul 2016 - May 2018}
         \begin{itemize}
-            \item Implemented sensor data fusion algorithms with a small team of 5 contributors 
-            \item Created standalone libraries to be integrated into multiple Boeing platforms
-            \item Designed and developed a modular library capable of running multiple related algorithms and combining their results
+            \item Implemented sensor data fusion algorithms with a small team of 5 contributors
             \item Implemented and maintained an application to perform offline simulations which integrated with internally developed tools to evaluate algorithm performance
-            \item Prototyped, tested and analyzed a new Kalman filtering functionality to increase performance of algorithms and enable new capabilities
+            \item Prototyped, tested and analyzed a new Kalman filtering approach to increase performance of algorithms and enable new capabilities
         \end{itemize}
     \end{cvsubsection}
 \end{boeing}
@@ -137,10 +154,10 @@
 
 % Education
 \begin{cvsection}{Education}
-    \begin{cvsubsection}[2]{Rolla, MO}{Missouri University of Science and Technology}{Aug 2012 - May 2016}
+    \begin{cvsubsection}[2]{Rolla, MO}{Missouri University of Science and Technology}{}
         \begin{itemize}
-            \item B.S. in Computer Science, Magna Cum Laude, GPA: 3.69
-            \item B.S. in Computer Engineering, Magna Cum Laude, GPA: 3.69
+            \item B.S. in Computer Science, Magna Cum Laude
+            \item B.S. in Computer Engineering, Magna Cum Laude
         \end{itemize}
     \end{cvsubsection}
 \end{cvsection} 
@@ -160,7 +177,7 @@
 \begin{cvsection}{Languages and Technologies}
     \begin{cvsubsection}{}{}{}  
         \begin{itemize}
-            \item C++; Python; PyTorch; Robot Operating System (ROS); Bazel; CMake; Git; Boost;
+            \item C++; Python; PyTorch; BigQuery; Robot Operating System (ROS); Bazel; CMake; Git; Boost;
         \end{itemize}
     \end{cvsubsection}
 \end{cvsection}
